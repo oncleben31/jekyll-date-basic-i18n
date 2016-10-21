@@ -1,6 +1,6 @@
 # jekyll-date-basic-i18n
 
- This code is a basic internationalization of dates in Jekyll without plugin. You just have to copy an include, a string file and make a correct call with liquid the liquid tag `{% translated_date.html ...}``
+ This code is a basic internationalization of dates in Jekyll without plugin. You just have to copy the include, a string file and make a correct call with the liquid tag `{% translated_date.html ... %}`
 
 ## Usage
 
@@ -9,14 +9,14 @@ Insert the following liquid tag in your code:
 `{% include translated_date.html date=A_DATE format=YOUR_FORMAT lang=THE_LANG_TO-USE %}`
 
 *  `date` is the date to be used (ex: `page.date`)
-*   `format`is the date format you want to use (ex: `"%A %-d %B %Y"`). If you omit this parameter the default will be:
+*   `format` is the date format you want to use (ex: `"%A %-d %B %Y"`) following the [date filter syntax](https://help.shopify.com/themes/liquid/filters/additional-filters#date). If you omit this parameter the default will be:
   *   `date_format` if set in the `_config.yml`
   *   `"%b %-d, %Y"` otherwise.
-*   `lang`is the language to use for the translation (ex: en or fr). You have to put a file `THE_LANG_TO_USE.yml` in the `_data/locales`folder. If you omit `lang` parameter the default will be:
+*   `lang` is the language to use for the translation (ex: `en` or `fr`). You have to put a file `THE_LANG_TO_USE.yml` in the `_data/locales` folder. If you omit `lang` parameter the default will be:
   *   `lang` set in the Front Matter of your post or page.
   *   `lang` set in the `_config.yml`
 
-This include will replace in the `format`string the `%a` (abbreviated day name), `%A` (full day name), `%b` (abbreviated month name) and `%B` (full month name), by the corresponding translation found in the `_data/locales/[lang].yml` file.
+This include will replace in the `format` string the `%a` (abbreviated day name), `%A` (full day name), `%b` (abbreviated month name) and `%B` (full month name), by the corresponding translation found in the `_data/locales/[lang].yml` file.
 
 
 ## Contributing
@@ -35,4 +35,4 @@ If you want to share your translation to others languages, make a Pull Request.
 
 This is the code I've designed when trying to localized [my blog oncleben31.cc](http://oncleben31.cc) (source available at https://github.com/oncleben31/oncleben31.github.io).
 
-I've made it the more reusable possible with the idea to push it in minima, the default Jekyll theme. There is still an open PR (https://github.com/jekyll/minima/pull/60) open with this code and some string to be used to translate some strings used by the theme.
+I've made it the more reusable possible with the idea to push it in minima, the default Jekyll theme. There is still an opened PR [jekyll/minima#60](https://github.com/jekyll/minima/pull/60) with this code and some strings to translate the theme.
