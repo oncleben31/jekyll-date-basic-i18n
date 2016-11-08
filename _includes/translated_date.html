@@ -1,5 +1,5 @@
 {% comment %}
-This include allows to tranlate the days and months in the date by using strings in _data/locales/[lang].yml
+This include allows to translate the days and months in the date by using strings in _data/locales/[lang].yml
 This include can be called with three parameters:
  - include.date: the date to be processed
  - include.format: the date format. (If empty a default format will be used)
@@ -23,7 +23,7 @@ Init the lang parameter depending if it's set in the include call, in the page o
 {% assign lang = include.lang | default: page.lang | default: site.lang %}
 
 {% comment %}
-Use tranlated abbreviated weekday if "%a" is used in the format and the translation is available in _data/locales/[lang].yml
+Use translated abbreviated weekday if "%a" is used in the format and the translation is available in _data/locales/[lang].yml
 {% endcomment %}
 
 {% if site.data.locales[lang].abbreviated_weekday[num_day] %}
@@ -31,7 +31,7 @@ Use tranlated abbreviated weekday if "%a" is used in the format and the translat
 {% endif %}
 
 {% comment %}
-Use tranlated full weekday if "%A" is used in the format and the translation is available in _data/locales/[lang].yml
+Use translated full weekday if "%A" is used in the format and the translation is available in _data/locales/[lang].yml
 {% endcomment %}
 
 {% if site.data.locales[lang].full_weekday[num_day] %}
@@ -39,7 +39,7 @@ Use tranlated full weekday if "%A" is used in the format and the translation is 
 {% endif %}
 
 {% comment %}
-Use tranlated abbreviated month if "%b" is used in the format and the translation is available in _data/locales/[lang].yml
+Use translated abbreviated month if "%b" is used in the format and the translation is available in _data/locales/[lang].yml
 {% endcomment %}
 
 {% if site.data.locales[lang].abbreviated_month[num_month] %}
@@ -47,7 +47,7 @@ Use tranlated abbreviated month if "%b" is used in the format and the translatio
 {% endif %}
 
 {% comment %}
-Use tranlated abbreviated weekday if "%B" is used in the format and the translation is available in _data/locales/[lang].yml
+Use translated abbreviated weekday if "%B" is used in the format and the translation is available in _data/locales/[lang].yml
 {% endcomment %}
 
 {% if site.data.locales[lang].full_month[num_month] %}
