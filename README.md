@@ -21,7 +21,7 @@ This include will replace in the `format` string the `%a` (abbreviated day name)
 ## Example
 
 ```
-{% include translated-date.html date=post.date format="%-d %B %Y" lang="pl" %}
+{% include translated_date.html date=post.date format="%-d %B %Y" lang="pl" %}
 ```
 
 ## Contributing
